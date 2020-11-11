@@ -32,26 +32,26 @@ function watchFiles() {
 
 // Compile sass to css
 
-// function css(done) {
-//     src(['assets/scss/*.scss'])
-//         .pipe(sourcemaps.init())
-//         .pipe(sass().on('error', sass.logError))
-//         .pipe(cssmin({keepBreaks: false}))
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(sourcemaps.write())
-//         .pipe(dest('./assets/css'))
-//         .pipe(browserSync.stream());
-//         done()
-// }
+function css(done) {
+    src(['assets/scss/*.scss'])
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cssmin({keepBreaks: false}))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write())
+        .pipe(dest('./assets/css'))
+        .pipe(browserSync.stream());
+        done()
+}
 
 // CSS export: compact
-// function cssbuild(done) {
-//     src([assetsDev + 'css/*.css', '!'+ assetsDev + 'css/*.min.css'])
-//         .pipe(cssmin({keepBreaks: true}))
-//         .pipe(autoprefixer())
-//         .pipe(dest(assetsProduction + 'css'));
-//     done();
-// }
+function cssbuild(done) {
+    src([assetsDev + 'css/*.css', '!'+ assetsDev + 'css/*.min.css'])
+        .pipe(cssmin({keepBreaks: true}))
+        .pipe(autoprefixer())
+        .pipe(dest(assetsProduction + 'css'));
+    done();
+}
 
 // CSS export: compressed
 function cssminTask(done) {
