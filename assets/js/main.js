@@ -1,11 +1,16 @@
-/**
-* Template Name: Shuffle - v2.2.0
-* Template URL: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 !(function($) {
   "use strict";
+
+//Preloader
+  $(window).on('load', function() {
+    console.log('runs')
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  });
 
   // Stick the header at top on scroll
   $("#header").sticky({
