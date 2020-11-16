@@ -4,6 +4,7 @@ let homepageContent = Array.from( document.querySelectorAll(".homepage-content")
 let headerNewsButton = document.querySelector(".header-news-button")
 let navButtonsWithoutNews = Array.from(document.querySelectorAll(".nav-menu>ul>li")).filter(el => el.className !== "header-news-button")
 
+console.log(navButtonsWithoutNews)
 
 const showBlogPage =() => {
     blog.style.display = "block"
