@@ -6,11 +6,12 @@ let navButtons = Array.from(document.querySelectorAll(".nav-menu>ul>li"))
 
 const showBlogPage =() => {
     blog.style.display = "block"
+    navButtons.map(el => el.classList.remove("active"))
     headerNewsButton.classList.add('active')
     homepageContent.map(el => el.style.display ="none")
 }
 
-console.log(blog)
+console.log(navButtons)
 
 
 headerNewsButton.addEventListener("click", ()=>{
@@ -18,3 +19,4 @@ headerNewsButton.addEventListener("click", ()=>{
    console.log(navButtons)
 })
 
+navButtons.map(button => button.addEventListener("click", console.log(button)))
