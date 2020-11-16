@@ -146,6 +146,10 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 40px;
 }
 
+.header-news-button {
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -610,84 +614,7 @@ section {
   margin-bottom: 0;
 }
 
-.about .progress {
-  height: 50px;
-  display: block;
-  background: none;
-}
 
-.about .progress .skill {
-  padding: 10px 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #58716d;
-}
-
-.about .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.about .progress-bar-wrap {
-  background: #e6eceb;
-}
-
-.about .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: .9s;
-  background-color: #1bbca3;
-}
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts .count-box {
-  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  width: 100%;
-  background: #fff;
-}
-
-.counts .count-box i {
-  display: block;
-  font-size: 30px;
-  color: #1bbca3;
-  float: left;
-}
-
-.counts .count-box span {
-  font-size: 42px;
-  line-height: 24px;
-  display: block;
-  font-weight: 700;
-  color: #58716d;
-  margin-left: 50px;
-}
-
-.counts .count-box p {
-  padding: 30px 0 0 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-
-.counts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #7c9995;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-
-.counts .count-box a:hover {
-  color: #a7bbb8;
-}
 
 /*--------------------------------------------------------------
 # Our Services
@@ -1588,4 +1515,14 @@ section {
   color: #fff;
 }
 
+.homepage-blog {
+  display: none;
+}
 
+.homepage-content {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
