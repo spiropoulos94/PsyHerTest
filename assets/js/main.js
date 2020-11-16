@@ -4,7 +4,6 @@
 
 //Preloader
   $(window).on('load', function() {
-    console.log('runs')
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
@@ -155,20 +154,8 @@
     return false;
   });
 
-  // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
 
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
+
 
   // Porfolio isotope and filter
   $(window).on('load', function() {

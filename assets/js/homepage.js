@@ -2,21 +2,28 @@
 let blog = document.querySelector(".homepage-blog")
 let homepageContent = Array.from( document.querySelectorAll(".homepage-content"))
 let headerNewsButton = document.querySelector(".header-news-button")
-let navButtons = Array.from(document.querySelectorAll(".nav-menu>ul>li"))
+let navButtonsWithoutNews = Array.from(document.querySelectorAll(".nav-menu>ul>li")).filter(el => el.className !== "header-news-button")
+
 
 const showBlogPage =() => {
     blog.style.display = "block"
-    navButtons.map(el => el.classList.remove("active"))
+    navButtonsWithoutNews.map(el => el.classList.remove("active"))
     headerNewsButton.classList.add('active')
     homepageContent.map(el => el.style.display ="none")
 }
 
-console.log(navButtons)
+const showHomePageContents = () => {
+    console.log("deixnei to homepage")
+    homepageContent.map(el => el.style.display ="block")
+    blog.style.display = "none"
+}
 
 
 headerNewsButton.addEventListener("click", ()=>{
+    console.log('deixnei to blog')
    showBlogPage();
-   console.log(navButtons)
 })
 
-navButtons.map(button => button.addEventListener("click", console.log(button)))
+navButtonsWithoutNews.map(button => button.addEventListener("click", ()=>{
+    showHomePageContents();
+}))
