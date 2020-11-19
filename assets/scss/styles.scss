@@ -7,8 +7,7 @@
 //Variables
 
 $primary : #056c5f;
-$section-bg-1  : #5FAB5F;
-$section-bg-2 : #4D934D;
+$section-bg-1  : lighten($primary, 10%);;
 $font-color-1: white;
 
 
@@ -764,12 +763,13 @@ section {
 
 .more-services .card {
   border: 0;
-  text-align: ceneter;
+  text-align: center;
 }
 
 .more-services .card-body {
   -moz-text-align-last: center;
   text-align-last: center;
+  color: $primary;
 }
 
 .more-services .card-title a {
@@ -1269,10 +1269,14 @@ section {
 }
 
 .contact .info-bg {
-  background: white;
+  background: $section-bg-1;
+  h4,p {
+    color: white;
+  }
 }
 
 .contact .contact-form-wrap {
+  color: $font-color-1;
   box-shadow: 10px -5px 40px 0 rgba(0, 0, 0, 0.1);
   background: $section-bg-1;
   position: relative;
@@ -1337,7 +1341,6 @@ section {
 .contact .php-email-form label {
   font-family: "Poppins", sans-serif;
   margin-bottom: 5px;
-  color: #5f7c78;
 }
 
 .contact .php-email-form input, .contact .php-email-form textarea {

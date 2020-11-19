@@ -28,3 +28,4 @@ headerNewsButton.addEventListener("click", ()=>{
 navButtonsWithoutNews.map(button => button.addEventListener("click", ()=>{
     showHomePageContents();
 }))
+
